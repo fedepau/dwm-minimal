@@ -1,6 +1,6 @@
 # CFP's build of dwm
 
-Another fork of dwm. It is less patched (specifically concerning the status monitor) and has different keybinds as it's intended to work with the IBM Model M I have in my office (`MODKEY` is set to the `ALT`key, not the `SUPER` key). For documentation, refer to [the original website](https://dwm.suckless.org/).
+Another fork of dwm. It is less patched (specifically concerning the status monitor) and has different keybinds as it's intended to work with the IBM Model M I have in my office (`MODKEY` is set to the `ALT` key, not the `SUPER` key). For documentation, refer to [the original website](https://dwm.suckless.org/).
 
 ## Applied patches:
 - [accessnthmonitor](https://dwm.suckless.org/patches/accessnthmonitor/)
