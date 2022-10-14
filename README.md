@@ -9,6 +9,7 @@ Just another fork of dwm. Compared to [my main build](https://github.com/fedepau
 - [attachbottom](https://dwm.suckless.org/patches/attachbottom/)
 - [barpadding](https://dwm.suckless.org/patches/barpadding/)
 - [bartabgroups](https://dwm.suckless.org/patches/bartabgroups/)
+- [cursorwarp (mononly)](https://dwm.suckless.org/patches/cursorwarp/)
 - [focusonnetactive](https://dwm.suckless.org/patches/focusonnetactive/)
 - [fullscreen](https://dwm.suckless.org/patches/fullscreen/)
 - [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
@@ -19,7 +20,6 @@ Just another fork of dwm. Compared to [my main build](https://github.com/fedepau
 - [statuspadding](https://dwm.suckless.org/patches/statuspadding/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/)
-- [warp](https://dwm.suckless.org/patches/warp/)
 
 ## Requirements:
 Xlib header files. On Arch-based systems:
