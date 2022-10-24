@@ -20,6 +20,14 @@ index 331a309..c80ef8a 100644
  }
  
  void
+@@ -906,6 +908,7 @@ focusstack(const Arg *arg)
+ 	if (c) {
+ 		focus(c);
+ 		restack(selmon);
++		XWarpPointer(dpy, None, c->win, 0, 0, 0, 0, c->w/2, c->h/2);
+ 	}
+ }
+ 
 -- 
 2.30.1
 
