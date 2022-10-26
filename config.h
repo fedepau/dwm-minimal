@@ -2,7 +2,6 @@
 
 #define BROWSER "brave"
 #define JUPYTER "jupyter-lab"
-#define MAIL "aerc"
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -168,7 +167,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY,                       XK_w,      spawn,          {.v = (const char*[]){ BROWSER, NULL } } },
 	{ MODKEY,                       XK_y,      spawn,          {.v = (const char*[]){ JUPYTER, NULL } } },
-	{ MODKEY,                       XK_m,      spawn,          {.v = (const char*[]){ MAIL, NULL } } },
+	{ MODKEY,                       XK_m,      spawn,          SHCMD("st -e aerc") },
     { 0, XF86XK_AudioMicMute,                  spawn,          SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioMute,                     spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; kill -44 $(pidof dwmblocks)") },
