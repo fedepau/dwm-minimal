@@ -2,7 +2,7 @@
 
 #define BROWSER "brave"
 #define JUPYTER "jupyter-lab"
-#define MAIL "claws-mail"
+#define MAIL "aerc"
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
