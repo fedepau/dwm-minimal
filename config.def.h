@@ -175,6 +175,7 @@ static const Key keys[] = {
 	{ 0, XF86XK_MonBrightnessUp,               spawn,          SHCMD("xbacklight -inc 5; kill -45 $(pidof dwmblocks)") },
 	{ 0, XF86XK_MonBrightnessDown,             spawn,          SHCMD("xbacklight -dec 5; kill -45 $(pidof dwmblocks)") },
 	{ 0, XF86XK_ScreenSaver,                   spawn,          SHCMD("slock") },
+	{ 0, XF86XK_TouchpadToggle,                spawn,          SHCMD("touchpad_toggle.sh") },
 	{ 0, XF86XK_WebCam,                        spawn,          SHCMD("sudo rfkill toggle bluetooth") },
 };
 
