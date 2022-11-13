@@ -16,6 +16,7 @@ Just another fork of dwm. Compared to [my main build](https://github.com/fedepau
 - [movestack](https://dwm.suckless.org/patches/movestack/)
 - [pertag](https://dwm.suckless.org/patches/pertag/)
 - [preserveonrestart](https://dwm.suckless.org/patches/preserveonrestart/)
+- [resizecorners](https://dwm.suckless.org/patches/resizecorners/)
 - [statusallmons](https://dwm.suckless.org/patches/statusallmons/)
 - [statuspadding](https://dwm.suckless.org/patches/statuspadding/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
