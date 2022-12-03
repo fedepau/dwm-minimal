@@ -39,10 +39,12 @@ typedef struct {
 } Sp;
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spcalc", "-g", "120x34", "-e", "bc", "-lq", NULL };
+const char *spcmd3[] = {"st", "-n", "splf",   "-g", "120x34", "-e", "lf", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
 	{"spcalc",      spcmd2},
+	{"splf",        spcmd3},
 };
 
 /* tagging */
@@ -59,6 +61,7 @@ static const Rule rules[] = {
 	{ NULL,      NULL,        "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 	{ NULL,	     "spterm",	  NULL,		      SPTAG(0),	 1,          1,           0,        -1 },
 	{ NULL,	     "spcalc",	  NULL,		      SPTAG(1),	 1,          0,           0,        -1 },
+	{ NULL,	     "splf",	  NULL,		      SPTAG(2),	 1,          0,           0,        -1 },
 };
 
 /* layout(s) */
@@ -170,6 +173,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Left,   tagtoprev,      {0} },
 	{ MODKEY,            			XK_s,  	   togglescratch,  {.ui = 0 } },
 	{ MODKEY,            			XK_c,	   togglescratch,  {.ui = 1 } },
+	{ MODKEY,            			XK_r,	   togglescratch,  {.ui = 2 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -204,7 +208,7 @@ static const Button buttons[] = {
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button1,        resizemouse,    {0} },
+	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
