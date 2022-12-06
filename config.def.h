@@ -37,14 +37,14 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {"st", "-n", "spcalc", "-g", "120x34", "-e", "bc", "-lq", NULL };
-const char *spcmd3[] = {"st", "-n", "splf",   "-g", "120x34", "-e", "lf", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm",  "-g", "120x34", NULL };
+const char *spcmd2[] = {"st", "-n", "spcalc",  "-g", "120x34", "-e", "bc", "-lq", NULL };
+const char *spcmd3[] = {"st", "-n", "spranger","-g", "120x34", "-e", "ranger", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
 	{"spcalc",      spcmd2},
-	{"splf",        spcmd3},
+	{"spranger",    spcmd3},
 };
 
 /* tagging */
@@ -61,7 +61,7 @@ static const Rule rules[] = {
 	{ NULL,      NULL,        "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 	{ NULL,	     "spterm",	  NULL,		      SPTAG(0),	 1,          1,           0,        -1 },
 	{ NULL,	     "spcalc",	  NULL,		      SPTAG(1),	 1,          0,           0,        -1 },
-	{ NULL,	     "splf",	  NULL,		      SPTAG(2),	 1,          0,           0,        -1 },
+	{ NULL,	     "spranger",  NULL,		      SPTAG(2),	 1,          0,           0,        -1 },
 };
 
 /* layout(s) */
