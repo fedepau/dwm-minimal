@@ -10,7 +10,7 @@ Just another fork of dwm. Compared to [my main build](https://github.com/fedepau
 - [barpadding](https://dwm.suckless.org/patches/barpadding/)
 - [bartabgroups](https://dwm.suckless.org/patches/bartabgroups/)
 - [cursorwarp (mononly)](https://dwm.suckless.org/patches/cursorwarp/)
-- [cyclelayouts)](https://dwm.suckless.org/patches/cyclelayouts/)
+- [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
 - [focusonnetactive](https://dwm.suckless.org/patches/focusonnetactive/)
 - [fullscreen](https://dwm.suckless.org/patches/fullscreen/)
 - [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
