@@ -2,6 +2,7 @@
 
 #define BROWSER "brave"
 #define JUPYTER "jupyter-lab"
+#define TODO "todo"
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -59,6 +60,7 @@ static const Rule rules[] = {
 	{ "Firefox", NULL,        NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "st",      NULL,        NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      NULL,        "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	{ "Zathura", "org.pwmt.zathura", "org.pwmt.zathura", 0, 0,       0,           1,        -1 },
 	{ NULL,	     "spterm",	  NULL,		      SPTAG(0),	 1,          1,           0,        -1 },
 	{ NULL,	     "spcalc",	  NULL,		      SPTAG(1),	 1,          0,           0,        -1 },
 	{ NULL,	     "spranger",  NULL,		      SPTAG(2),	 1,          0,           0,        -1 },
@@ -171,9 +173,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Left,   viewprev,       {0} },
 	{ MODKEY|ShiftMask,             XK_Right,  tagtonext,      {0} },
 	{ MODKEY|ShiftMask,             XK_Left,   tagtoprev,      {0} },
-	{ MODKEY,            			XK_s,  	   togglescratch,  {.ui = 0 } },
-	{ MODKEY,            			XK_c,	   togglescratch,  {.ui = 1 } },
-	{ MODKEY,            			XK_r,	   togglescratch,  {.ui = 2 } },
+	{ MODKEY,                       XK_s,      togglescratch,  {.ui = 0 } },
+	{ MODKEY,                       XK_c,      togglescratch,  {.ui = 1 } },
+	{ MODKEY,                       XK_r,      togglescratch,  {.ui = 2 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -186,8 +188,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY,                       XK_w,      spawn,          {.v = (const char*[]){ BROWSER, NULL } } },
 	{ MODKEY,                       XK_y,      spawn,          {.v = (const char*[]){ JUPYTER, NULL } } },
+	{ MODKEY,                       XK_a,      spawn,          {.v = (const char*[]){ TODO, NULL } } },
 	{ MODKEY,                       XK_m,      spawn,          SHCMD("st -e aerc") },
-    { 0, XF86XK_AudioMicMute,                  spawn,          SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle; kill -44 $(pidof dwmblocks)") },
+  { 0, XF86XK_AudioMicMute,                  spawn,          SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioMute,                     spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioRaiseVolume,              spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%; kill -44 $(pidof dwmblocks)") },
